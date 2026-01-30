@@ -1,0 +1,46 @@
+{
+  "config": "BinaryOnlyConfig",
+  "models": [
+    {
+      "seed": 42,
+      "best_f1": 0.45161290322580644,
+      "final_epoch": 69,
+      "checkpoint_path": "checkpoints\\ensemble_phase1\\seed_42\\best_model.pt",
+      "history_path": "checkpoints\\ensemble_phase1\\seed_42\\training_history.json"
+    },
+    {
+      "seed": 123,
+      "best_f1": 0.40609137055837563,
+      "final_epoch": 56,
+      "checkpoint_path": "checkpoints\\ensemble_phase1\\seed_123\\best_model.pt",
+      "history_path": "checkpoints\\ensemble_phase1\\seed_123\\training_history.json"
+    },
+    {
+      "seed": 456,
+      "best_f1": 0.5161290322580645,
+      "final_epoch": 70,
+      "checkpoint_path": "checkpoints\\ensemble_phase1\\seed_456\\best_model.pt",
+      "history_path": "checkpoints\\ensemble_phase1\\seed_456\\training_history.json"
+    },
+    {
+      "seed": 789,
+      "best_f1": 0.43870967741935485,
+      "final_epoch": 73,
+      "checkpoint_path": "checkpoints\\ensemble_phase1\\seed_789\\best_model.pt",
+      "history_path": "checkpoints\\ensemble_phase1\\seed_789\\training_history.json"
+    },
+    {
+      "seed": 1024,
+      "best_f1": 0.5409836065573771,
+      "final_epoch": 103,
+      "checkpoint_path": "checkpoints\\ensemble_phase1\\seed_1024\\best_model.pt",
+      "history_path": "checkpoints\\ensemble_phase1\\seed_1024\\training_history.json"
+    }
+  ],
+  "statistics": {
+    "mean_f1": 0.4707053180037957,
+    "std_f1": 0.05013093891324382,
+    "min_f1": 0.40609137055837563,
+    "max_f1": 0.5409836065573771
+  }
+}

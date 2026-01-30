@@ -1,0 +1,23 @@
+{
+  "binary_failure": {
+    "accuracy": 0.02887844190732035,
+    "precision": 0.02887844190732035,
+    "recall": 1.0,
+    "f1_score": 0.05613577023498695,
+    "auc_roc": 0.5,
+    "true_negatives": 0,
+    "false_positives": 1446,
+    "false_negatives": 0,
+    "true_positives": 43,
+    "specificity": 0.0,
+    "optimal_threshold": 1.0,
+    "optimized": true,
+    "temperature": 1.2872380018234253,
+    "calibrated": true
+  },
+  "config": {
+    "use_temporal_sequences": true,
+    "threshold_optimized": true,
+    "calibrated": true
+  }
+}

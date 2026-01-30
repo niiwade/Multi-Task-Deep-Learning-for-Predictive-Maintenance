@@ -1,0 +1,98 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting scikit-survival
+  Downloading scikit_survival-0.26.0-cp314-cp314-win_amd64.whl.metadata (7.4 kB)
+Collecting lifelines
+  Downloading lifelines-0.30.0-py3-none-any.whl.metadata (3.2 kB)
+Collecting ecos (from scikit-survival)
+  Downloading ecos-2.0.14.tar.gz (142 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: joblib in c:\users\joseph\appdata\roaming\python\python314\site-packages (from scikit-survival) (1.5.3)
+Collecting numexpr (from scikit-survival)
+  Downloading numexpr-2.14.1-cp314-cp314-win_amd64.whl.metadata (9.3 kB)
+Requirement already satisfied: numpy in c:\users\joseph\appdata\roaming\python\python314\site-packages (from scikit-survival) (2.4.1)
+Collecting osqp>=1.0.2 (from scikit-survival)
+  Downloading osqp-1.1.0.tar.gz (56 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: pandas>=2.0.0 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from scikit-survival) (3.0.0)
+Requirement already satisfied: scipy>=1.3.2 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from scikit-survival) (1.17.0)
+Collecting scikit-learn<1.8,>=1.6.1 (from scikit-survival)
+  Downloading scikit_learn-1.7.2-cp314-cp314-win_amd64.whl.metadata (11 kB)
+Requirement already satisfied: threadpoolctl>=3.1.0 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from scikit-learn<1.8,>=1.6.1->scikit-survival) (3.6.0)
+Requirement already satisfied: matplotlib>=3.0 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from lifelines) (3.10.8)
+Collecting autograd>=1.5 (from lifelines)
+  Downloading autograd-1.8.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting autograd-gamma>=0.3 (from lifelines)
+  Downloading autograd-gamma-0.5.0.tar.gz (4.0 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting formulaic>=0.2.2 (from lifelines)
+  Downloading formulaic-1.2.1-py3-none-any.whl.metadata (7.0 kB)
+Collecting interface-meta>=1.2.0 (from formulaic>=0.2.2->lifelines)
+  Downloading interface_meta-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting narwhals>=1.17 (from formulaic>=0.2.2->lifelines)
+  Downloading narwhals-2.15.0-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: typing-extensions>=4.2.0 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from formulaic>=0.2.2->lifelines) (4.15.0)
+Collecting wrapt>=1.17.0rc1 (from formulaic>=0.2.2->lifelines)
+  Downloading wrapt-2.1.0rc1-cp314-cp314-win_amd64.whl.metadata (7.6 kB)
+Requirement already satisfied: contourpy>=1.0.1 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (4.61.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (26.0)
+Requirement already satisfied: pillow>=8 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (12.1.0)
+Requirement already satisfied: pyparsing>=3 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from matplotlib>=3.0->lifelines) (2.9.0.post0)
+Requirement already satisfied: jinja2 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from osqp>=1.0.2->scikit-survival) (3.1.6)
+Requirement already satisfied: setuptools in c:\users\joseph\appdata\roaming\python\python314\site-packages (from osqp>=1.0.2->scikit-survival) (80.10.2)
+Requirement already satisfied: tzdata in c:\users\joseph\appdata\roaming\python\python314\site-packages (from pandas>=2.0.0->scikit-survival) (2025.3)
+Requirement already satisfied: six>=1.5 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from python-dateutil>=2.7->matplotlib>=3.0->lifelines) (1.17.0)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\joseph\appdata\roaming\python\python314\site-packages (from jinja2->osqp>=1.0.2->scikit-survival) (3.0.3)
+Downloading scikit_survival-0.26.0-cp314-cp314-win_amd64.whl (820 kB)
+   ---------------------------------------- 820.9/820.9 kB 3.2 MB/s  0:00:00
+Downloading scikit_learn-1.7.2-cp314-cp314-win_amd64.whl (8.8 MB)
+   ---------------------------------------- 8.8/8.8 MB 8.1 MB/s  0:00:01
+Downloading lifelines-0.30.0-py3-none-any.whl (349 kB)
+Downloading autograd-1.8.0-py3-none-any.whl (51 kB)
+Downloading formulaic-1.2.1-py3-none-any.whl (117 kB)
+Downloading interface_meta-1.3.0-py3-none-any.whl (14 kB)
+Downloading narwhals-2.15.0-py3-none-any.whl (432 kB)
+Downloading wrapt-2.1.0rc1-cp314-cp314-win_amd64.whl (60 kB)
+Downloading numexpr-2.14.1-cp314-cp314-win_amd64.whl (162 kB)
+Building wheels for collected packages: autograd-gamma, osqp, ecos
+  Building wheel for autograd-gamma (pyproject.toml): started
+  Building wheel for autograd-gamma (pyproject.toml): finished with status 'done'
+  Created wheel for autograd-gamma: filename=autograd_gamma-0.5.0-py3-none-any.whl size=4153 sha256=11b1cb5ba61619fcbab737e3bc47ad67ba7352402ccefc736ca7eb31bd446db1
+  Stored in directory: c:\users\joseph\appdata\local\pip\cache\wheels\ae\08\f1\e238c5133d843389315499bbe1a11df33559f8ef9da8ad0a8e
+  Building wheel for osqp (pyproject.toml): started
+  Building wheel for osqp (pyproject.toml): still running...
+  Building wheel for osqp (pyproject.toml): finished with status 'done'
+  Created wheel for osqp: filename=osqp-1.1.0-cp314-cp314-win_amd64.whl size=663439 sha256=4f0efbfb4975a82ceb8cdbc2038ebace9fef3c3bc21ab87f1d1f09bf7a09ac7f
+  Stored in directory: c:\users\joseph\appdata\local\pip\cache\wheels\46\21\9b\2fddc644a52edd15184ca83a6cdba8fbc0d5bedd0ddd2fa83c
+  Building wheel for ecos (pyproject.toml): started
+  Building wheel for ecos (pyproject.toml): finished with status 'done'
+  Created wheel for ecos: filename=ecos-2.0.14-cp314-cp314-win_amd64.whl size=74931 sha256=254d5f1dfa7cb929f462595f9d4fa6f999f89ff2cad85c025e206890cd63ac29
+  Stored in directory: c:\users\joseph\appdata\local\pip\cache\wheels\a3\3a\b7\9116747930ffa38c7b4a453f8a4765cfd9ae33e5c841075a39
+Successfully built autograd-gamma osqp ecos
+Installing collected packages: wrapt, numexpr, narwhals, interface-meta, autograd, scikit-learn, osqp, ecos, autograd-gamma, scikit-survival, formulaic, lifelines
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.8.0
+    Uninstalling scikit-learn-1.8.0:
+      Successfully uninstalled scikit-learn-1.8.0
+
+Successfully installed autograd-1.8.0 autograd-gamma-0.5.0 ecos-2.0.14 formulaic-1.2.1 interface-meta-1.3.0 lifelines-0.30.0 narwhals-2.15.0 numexpr-2.14.1 osqp-1.1.0 scikit-learn-1.7.2 scikit-survival-0.26.0 wrapt-2.1.0rc1

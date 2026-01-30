@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(else echo \"Dataset folder not found\")",
+      "Bash(fi)"
+    ]
+  }
+}

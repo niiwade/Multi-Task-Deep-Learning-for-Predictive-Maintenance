@@ -90,30 +90,11 @@ class AttentionAnalyzer:
         """
         # Collect feature-level attention (simplified version)
         # In practice, attention is over the temporal dimension
-        # Here we'll collect predictions and analyze patterns
+        # Here we use uniform importance as a placeholder since attention
+        # weights in this model are over sequence dimension, not features
 
-        feature_importance = np.zeros(len(self.feature_names))
-        num_batches = 0
-
-        with torch.no_grad():
-            for i, batch in enumerate(dataloader):
-                if i * dataloader.batch_size >= num_samples:
-                    break
-
-                numeric_features = batch['numeric_features'].to(self.device)
-                machine_type = batch['type'].to(self.device)
-
-                # Forward pass
-                outputs = self.model(numeric_features, machine_type)
-
-                # Use attention weights as proxy for importance
-                attention = outputs['attention_weights'].cpu().numpy()
-                feature_importance += attention.mean(axis=(0, 1, 2, 3))
-                num_batches += 1
-
-        feature_importance /= num_batches
-
-        # Normalize to sum to 1
+        # For proper feature importance, gradient-based methods or
+        # permutation importance would be more appropriate
         feature_importance = np.ones(len(self.feature_names)) / len(self.feature_names)
 
         # Create visualization
@@ -167,7 +148,8 @@ class AttentionAnalyzer:
                 outputs = self.model(numeric_features, machine_type)
 
                 attention = outputs['attention_weights'].cpu().numpy()
-                avg_attention = attention.mean(axis=(1, 2, 3))
+                # Attention shape: (batch, seq_len, seq_len)
+                avg_attention = attention.mean(axis=(1, 2))
 
                 all_attention.append(avg_attention)
                 all_failures.append(batch['failure'].numpy().flatten())
@@ -321,7 +303,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Visualize attention patterns')
     parser.add_argument('--checkpoint', type=str, default='./checkpoints/best_model.pt',
                        help='Path to model checkpoint')
-    parser.add_argument('--test_path', type=str, default='../dataset/test/test.csv',
+    parser.add_argument('--test_path', type=str, default='./dataset/test/test.csv',
                        help='Path to test CSV')
     parser.add_argument('--output_dir', type=str, default='./visualizations',
                        help='Directory to save visualizations')
@@ -352,11 +334,10 @@ if __name__ == '__main__':
 
     # Load dataset
     train_dataset, _, _ = load_datasets(
-        config['train_path'],
-        config['dev_path'],
-        config['test_path']
+        './dataset/train/train.csv',
+        './dataset/dev/dev.csv',
+        './dataset/test/test.csv'
     )
-
     from data_preprocessing import MultiTaskDataset
     test_dataset = MultiTaskDataset(args.test_path, scaler=train_dataset.scaler)
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
