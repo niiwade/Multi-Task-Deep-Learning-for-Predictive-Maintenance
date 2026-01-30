@@ -1,2 +1,4 @@
 .claude
 *.docx
+*.pyc
+__pycache__
