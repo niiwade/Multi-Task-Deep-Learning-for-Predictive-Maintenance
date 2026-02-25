@@ -3,6 +3,19 @@
 ## Project Overview
 Multi-task deep learning model for industrial predictive maintenance using Temporal Convolutional Networks (TCN) with attention mechanisms.
 
+---
+
+## 🖥️ Demo Dashboard (Model in Action)
+
+Interactive demo of the trained model running on test samples:
+
+```bash
+pip install -r requirements.txt
+streamlit run demo_dashboard.py
+```
+
+See `DEMO_DASHBOARD.md` for details.
+
 **Performs 3 tasks simultaneously:**
 - Binary failure prediction (will machine fail?)
 - Failure type classification (which failure mode?)

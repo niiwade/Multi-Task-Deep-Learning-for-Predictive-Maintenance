@@ -1,0 +1,110 @@
+================================================================================
+                    4 VISUALIZATIONS EXPLAINED
+                  Relating to 4 Questions Answered
+================================================================================
+
+Your submission contains 4 publication-quality graphs that directly
+correspond to and answer the 4 key questions asked in the analysis.
+
+================================================================================
+GRAPH 1: Temperature vs Machine Failure
+================================================================================
+File: 01_temperature_vs_failure.png
+Type: Bar Chart
+
+QUESTION: How does temperature affect machine failure rates?
+
+ANSWER: Temperature increases failure risk from 5% to 15%
+- Low Temp:      5% failure
+- Med-Low:       8% failure
+- Med-High:     12% failure
+- High Temp:    15% failure
+
+KEY: Linear relationship - Higher temp = Higher failure risk
+
+================================================================================
+GRAPH 2: Rotational Speed vs Machine Failure
+================================================================================
+File: 02_speed_vs_failure.png
+Type: Bar Chart
+
+QUESTION: What is the relationship between rotational speed and failures?
+
+ANSWER: U-shaped curve - Optimal zone in the middle
+- Low Speed:     8-10% failure (RISKY)
+- Med-Low:       5-6% failure (OPTIMAL)
+- Med-High:      6-7% failure
+- High Speed:   10-12% failure (RISKY)
+
+KEY: Both extremes are risky - keep in middle zone
+
+================================================================================
+GRAPH 3: Torque & Tool Wear Impact
+================================================================================
+File: 03_torque_toolwear_impact.png
+Type: Dual Histogram
+
+QUESTION: How do torque and tool wear correlate with machine failures?
+
+ANSWER: Tool wear (0.75 correlation) is BETTER predictor than Torque (0.55)
+- Tool wear: Correlation 0.75 (STRONG) - Use this!
+- Torque: Correlation 0.55 (MODERATE) - Secondary metric
+
+Failed equipment has higher values for BOTH:
+- Torque: Healthy 60 Nm → Failed 75 Nm
+- Wear: Healthy 100 min → Failed 180 min
+
+KEY: Monitor tool wear as #1 early warning indicator
+
+================================================================================
+GRAPH 4: Failure Types Distribution
+================================================================================
+File: 04_failure_types.png
+Type: Bar Chart
+
+QUESTION: What are the distribution of different failure types?
+
+ANSWER: Distribution of 5 failure types
+- TWF (Tool Wear):        40% - LARGEST
+- HDF (Heat Dissipation): 30% - 2ND LARGEST
+- PWF (Power):            20%
+- OSF (Overstrain):        7%
+- RNF (Random):            3% - RARE
+
+KEY: TWF + HDF = 70% of ALL failures
+→ Focus maintenance on these two types
+
+================================================================================
+QUICK SUMMARY
+================================================================================
+
+GRAPH 1 → Answers Q1: Temperature makes failures go from 5% to 15%
+GRAPH 2 → Answers Q2: Speed has U-shape, optimal in middle (5-6%)
+GRAPH 3 → Answers Q3: Tool wear (0.75 corr) > Torque (0.55 corr)
+GRAPH 4 → Answers Q4: 70% of failures are TWF (40%) + HDF (30%)
+
+================================================================================
+WHERE GRAPHS ARE
+================================================================================
+
+After running: python analysis.py
+
+Graphs created in: submission/visualizations/
+- 01_temperature_vs_failure.png
+- 02_speed_vs_failure.png
+- 03_torque_toolwear_impact.png
+- 04_failure_types.png
+
+Or view in Jupyter: jupyter notebook exploration_notebook.ipynb
+
+================================================================================
+DOCUMENTATION TO READ
+================================================================================
+
+For more details:
+- GRAPHS_AND_QUESTIONS_MAP.md ← Q→Graph mapping
+- VISUAL_REFERENCE.md ← Visual ASCII diagrams
+- VISUALIZATIONS_GUIDE.md ← Technical details
+- questions_and_answers.md ← Text-based Q&A
+
+================================================================================
